@@ -1,1 +1,56 @@
-<p>home-page works!</p>
+<div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      V0
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+  <div class="nav-links">
+    <a href="" target="_blank"></a>
+    <a href="" target="_blank"></a>
+    <a href="" target="_blank"></a>
+    <a href="" target="_blank"></a>
+    <a href="" target="_blank">Login</a>
+  </div>
+</div>
+
+
+<div class="text-center">
+  <h1> Gerar Diagnóstico</h1>
+  <div class="container">
+    <ul class="ks-cboxtags">
+      <li *ngFor="let sintoma of sintomas;let i=index">
+        <input type="checkbox" id="checkbox{{i}}" value="sintoma" (change)="marcar(sintoma)"><label
+          for="checkbox{{i}}">{{sintomas[i].nome}}</label>
+      </li>
+      <!-- <li><input type="checkbox" id="checkboxOne" value=""><label for="checkboxOne">Dor de Cabeça</label></li>
+          <li><input type="checkbox" id="checkboxTwo" value="" ><label for="checkboxTwo">Febre</label></li>
+          <li><input type="checkbox" id="checkboxThree" value="" ><label for="checkboxThree">Cansaço</label></li>
+          <li><input type="checkbox" id="checkboxFour" value=""><label for="checkboxFour">Falta de ar</label></li>
+          <li><input type="checkbox" id="checkboxFive" value=""><label for="checkboxFive">Febre baixa</label></li>
+          <li><input type="checkbox" id="checkboxSix" value="" ><label for="checkboxSix"> Febre acima de 37º</label></li>
+          <li><input type="checkbox" id="checkboxSeven" value=""><label for="checkboxSeven">Respiração  ofegante</label></li>
+          <li><input type="checkbox" id="checkboxEight" value=""><label for="checkboxEight">Agitacao</label></li>
+          <li><input type="checkbox" id="checkboxNine" value=""><label for="checkboxNine">Dor no corpo</label></li>
+          <li><input type="checkbox" id="checkboxTen" value=""><label for="checkboxTen">Vômito</label></li>
+          <li><input type="checkbox" id="checkboxEleven" value=""><label for="checkboxEleven">Náusea</label></li>
+          <li><input type="checkbox" id="checkboxTwelve" value=""><label for="checkboxTwelve">Tontura</label></li>
+          <li><input type="checkbox" id="checkboxThirteen" value=""><label for="checkboxThirteen">Tosse seca</label></li>
+          <li><input type="checkbox" id="checkboxFourteen" value=""><label for="checkboxFourteen">Insonia</label></li>
+          <li><input type="checkbox" id="checkboxFifteen" value=""><label for="checkboxFifteen">Falta de apetite</label></li> -->
+    </ul>
+
+  </div>
+  <div class="text-center">
+    <button type="button" class="btn btn-primary" (click)="gerarDiagnostico()">Diagnostico</button>
+  </div>
+</div>
+<app-migue></app-migue>

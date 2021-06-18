@@ -1,0 +1,9 @@
+<!-- <div *ngIf="resdivtado"> -->
+<div class="text-center">
+    <div *ngFor="let diagnostico of diagnosticoOrdenado">
+        <span *ngIf="diagnostico.pesoFinal>0"><label>{{diagnostico.nome}}:{{diagnostico.pesoFinal}}</label></span>
+    </div>
+
+</div>
+
+<!-- <div *ngIf="!resdivtado"></div> -->

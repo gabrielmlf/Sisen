@@ -7,21 +7,17 @@ import { LoginDataService } from './login-data.service';
 import { LoginScreenComponent } from './login-screen/login-screen.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
-
-
 const routes: Routes = [
   { path: 'login', component: LoginScreenComponent },
   { path: 'homepage', component: HomePageComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}
